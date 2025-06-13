@@ -2,65 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">MyApp</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Account</a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="index.html">Login</a></li>
-              <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Login Form -->
-  <div class="container mt-5">
-    <h2>Login</h2>
-    <form id="loginForm" class="needs-validation" novalidate>
-      <div class="mb-3">
-        <label for="loginEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="loginEmail" required />
-        <div class="invalid-feedback">Please enter a valid email.</div>
-      </div>
-      <div class="mb-3">
-        <label for="loginPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="loginPassword" required />
-        <div class="invalid-feedback">Please enter your password.</div>
-      </div>
-      <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="p-4">
+
+  <!-- Dropdown -->
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Select Language
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item">English</button></li>
+    <li><button class="dropdown-item">Hindi</button></li>
+    <li><button class="dropdown-item">Marathi</button></li>
+  </ul>
+
+  <br><br>
+
+  <!-- Navigation bar -->
+  <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm mb-3"
+      style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+    
+    <li class="nav-item">
+      <a href="index.html" class="nav-link active rounded-5">Login</a>
+    </li>
+    <li class="nav-item">
+      <a href="signup.html" class="nav-link rounded-5">Sign Up</a>
+    </li>
+  </ul>
+
+  <!-- Login form -->
+  <div class="card p-4">
+    <h4 class="mb-3">Login</h4>
+    <input type="text" class="form-control mb-2" placeholder="Username">
+    <input type="password" class="form-control mb-2" placeholder="Password">
+    <button class="btn btn-primary">Login</button>
   </div>
 
-  <script>
-    // Bootstrap form validation
-    (() => {
-      'use strict';
-      const form = document.getElementById('loginForm');
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      });
-    })();
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
